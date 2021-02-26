@@ -44,7 +44,7 @@ if (!is_array($user)) {
 
     <form action="../config/edit.php" method="post">
         <fieldset style="width:0px">
-            <legend>Alteração</legend>
+            <legend class="form-legend">Alteração</legend>
             <label for="name">Nome: <span class=attention>*</span></label>
             <br>
             <input type="text" name="name" id="name" value="<?php echo $user[

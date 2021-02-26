@@ -7,7 +7,7 @@
 
 <body>
     <fieldset style="width:0px">
-        <legend>Login</legend>
+        <legend class="form-legend">Login</legend>
         <form method="post" action="../config/login.php" id="formlogin" name="formlogin">
             <label>Login: </label>
             <input type="text" name="login" id="login" /><br />

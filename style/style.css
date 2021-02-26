@@ -1,4 +1,4 @@
-legend {
+.form-legend {
     font-size: 30px;
 }
 
@@ -12,6 +12,6 @@ table, td, th {
     width: 50%;
   }
 
-tbody {
+.tbody {
     text-align: center;
 }

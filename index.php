@@ -64,7 +64,7 @@ $stmt->execute();
                 <th>Ações</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="tbody">
             <?php while ($user = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
             <tr>
                 <td><?php echo $user['name']; ?></td>

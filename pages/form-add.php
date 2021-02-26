@@ -16,7 +16,7 @@ include '../config/auth-session.php';
     <p>Online como: <b><?php echo $_SESSION['login']; ?></b></p>
     <form action="../config/add.php" method="post">
         <fieldset style="width:0px">
-            <legend>Cadastro</legend>
+            <legend class="form-legend">Cadastro</legend>
             <label for="name">Nome: <span class=attention>*</span></label>
             <br>
             <input type="text" name="name" id="name" maxlength="60">
