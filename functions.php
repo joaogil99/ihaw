@@ -1,7 +1,5 @@
 <?php
-/**
- * Conecta com o MySQL usando PDO
- */
+// Conecta com o MySQL usando PDO 
 function db_connect()
 {
     $PDO = new PDO(
@@ -13,15 +11,11 @@ function db_connect()
     return $PDO;
 }
 
-/**
- * Converte datas entre os padrões ISO e brasileiro
- * Fonte: http://rberaldo.com.br/php-conversao-de-datas-formato-brasileiro-e-formato-iso/
- */
+// Converte datas entre os padrões ISO e brasileiro
 function dateConvert($date)
 {
     if (!strstr($date, '/')) {
-        // $date está no formato ISO (yyyy-mm-dd) e deve ser convertida
-        // para dd/mm/yyyy
+        // $date está no formato ISO (yyyy-mm-dd) e deve ser convertida para dd/mm/yyyy
         sscanf($date, '%d-%d-%d', $y, $m, $d);
         return sprintf('%02d/%02d/%04d', $d, $m, $y);
     } else {
@@ -33,11 +27,8 @@ function dateConvert($date)
     return false;
 }
 
-/**
- * Calcula a idade a partir da data de nascimento
- *
- * Sobre a classe DateTime: http://rberaldo.com.br/php-usando-a-classe-nativa-datetime/
- */
+// Calcula a idade a partir da data de nascimento
+
 function calculateAge($birthdate)
 {
     $now = new DateTime();

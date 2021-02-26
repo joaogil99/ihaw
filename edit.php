@@ -14,7 +14,7 @@ $password = isset($_POST['password']) ? $_POST['password'] : null;
 $ddd = isset($_POST['ddd']) ? $_POST['ddd'] : null;
 $id = isset($_POST['id']) ? $_POST['id'] : null;
 
-// validação (bem simples, mais uma vez)
+// validação se está vazio
 if (
     empty($name) ||
     empty($email) ||

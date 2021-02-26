@@ -6,3 +6,12 @@ legend {
     color: red;
     font-size: 15px;
 }
+
+table, td, th {
+    border: 1px solid black;
+    width: 50%;
+  }
+
+tbody {
+    text-align: center;
+}

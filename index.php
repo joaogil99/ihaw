@@ -8,7 +8,6 @@ $PDO = db_connect();
 // SQL para contar o total de registros
 // A biblioteca PDO possui o método rowCount(), mas ele pode ser impreciso.
 // É recomendável usar a função COUNT da SQL
-// Veja o Exemplo 2 deste link: http://php.net/manual/pt_BR/pdostatement.rowcount.php
 $sql_count = "SELECT COUNT(*) AS total FROM users ORDER BY name ASC";
 
 // SQL para selecionar os registros
@@ -31,6 +30,8 @@ $stmt->execute();
     <meta charset="utf-8">
 
     <title>Sistema de Cadastro</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -47,7 +48,7 @@ $stmt->execute();
 
     <?php if ($total > 0): ?>
 
-    <table width="50%" border="1">
+    <table width="50%">
         <thead>
             <tr>
                 <th>Nome</th>
@@ -63,7 +64,7 @@ $stmt->execute();
                 <th>Ações</th>
             </tr>
         </thead>
-        <tbody align="center">
+        <tbody>
             <?php while ($user = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
             <tr>
                 <td><?php echo $user['name']; ?></td>
