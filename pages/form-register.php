@@ -1,6 +1,5 @@
 <?php
 require '../config/init.php';
-include '../config/auth-session.php';
 ?>
 <!doctype html>
 <html>
@@ -13,7 +12,6 @@ include '../config/auth-session.php';
 </head>
 
 <body>
-    <p>Online como: <b><?php echo $_SESSION['login']; ?></b></p>
     <form action="../config/register.php" method="post">
         <fieldset style="width:0px">
             <legend class="form-legend">Cadastro</legend>

@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 
     <!-- Local CSS -->
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/style.css?1422981258">
+    <link rel="stylesheet" href="../css/login.css?1422981258">
 
     <title>Login</title>
 
@@ -40,7 +40,7 @@
     </div>
 
     <!-- Local JS -->
-    <script src="../js/script.js"></script>
+    <script src="../js/script.js?1422981258"></script>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
