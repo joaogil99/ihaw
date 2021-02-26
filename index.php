@@ -1,6 +1,6 @@
 <?php
-require_once 'init.php';
-include 'auth-session.php';
+require_once 'config/init.php';
+include 'config/auth-session.php';
 
 // abre a conexão
 $PDO = db_connect();
@@ -31,16 +31,16 @@ $stmt->execute();
 
     <title>Sistema de Cadastro</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
 
     <p>Bem vindo: <b><?php echo $_SESSION['login']; ?></b></p>
 
-    <p><a href="form-add.php">Adicionar Usuário</a></p>
+    <p><a href="pages/form-add.php">Adicionar Usuário</a></p>
     
-    <p><a href="form-login.php">Logout</a></p>
+    <p><a href="config/logout.php">Logout</a></p>
 
     <h2>Lista de Usuários</h2>
 
@@ -48,7 +48,7 @@ $stmt->execute();
 
     <?php if ($total > 0): ?>
 
-    <table width="50%">
+    <table>
         <thead>
             <tr>
                 <th>Nome</th>
@@ -80,10 +80,10 @@ $stmt->execute();
                 <td><?php echo $user['login']; ?></td>
                 <td><?php echo $user['password']; ?></td>
                 <td>
-                    <a href="form-edit.php?id=<?php echo $user[
+                    <a href="pages/form-edit.php?id=<?php echo $user[
                         'id'
                     ]; ?>">Editar</a>
-                    <a href="delete.php?id=<?php echo $user['id']; ?>"
+                    <a href="config/delete.php?id=<?php echo $user['id']; ?>"
                         onclick="return confirm('Tem certeza de que deseja remover?');">Remover</a>
                 </td>
             </tr>

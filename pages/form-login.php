@@ -2,13 +2,13 @@
 
 <head>
     <title>Login</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style/style.css">
 </head>
 
 <body>
     <fieldset style="width:0px">
         <legend>Login</legend>
-        <form method="post" action="login.php" id="formlogin" name="formlogin">
+        <form method="post" action="../config/login.php" id="formlogin" name="formlogin">
             <label>Login: </label>
             <input type="text" name="login" id="login" /><br />
             <label>Password:</label>

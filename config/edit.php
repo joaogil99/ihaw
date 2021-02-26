@@ -2,7 +2,7 @@
 
 require_once 'init.php';
 
-// pega os dados do formuário
+// resgata os valores do formulário
 $name = isset($_POST['name']) ? $_POST['name'] : null;
 $email = isset($_POST['email']) ? $_POST['email'] : null;
 $gender = isset($_POST['gender']) ? $_POST['gender'] : null;
@@ -12,8 +12,9 @@ $fone = isset($_POST['fone']) ? $_POST['fone'] : null;
 $login = isset($_POST['login']) ? $_POST['login'] : null;
 $password = isset($_POST['password']) ? $_POST['password'] : null;
 $ddd = isset($_POST['ddd']) ? $_POST['ddd'] : null;
+$id = isset($_POST['id']) ? $_POST['id'] : null;
 
-// validação (bem simples, só pra evitar dados vazios)
+// validação se está vazio
 if (
     empty($name) ||
     empty($email) ||
@@ -33,10 +34,10 @@ if (
 // então precisamos converter para YYYY-mm-dd
 $isoDate = dateConvert($birthdate);
 
-// insere no banco
+// atualiza o banco
 $PDO = db_connect();
 $sql =
-    "INSERT INTO users(name, email, gender, birthdate, lastname, fone, login, password, ddd) VALUES(:name, :email, :gender, :birthdate, :lastname, :fone, :login, :password, :ddd)";
+    "UPDATE users SET name = :name, email = :email, gender = :gender, birthdate = :birthdate, lastname = :lastname, fone = :fone, login = :login, password = :password, ddd = :ddd WHERE id = :id";
 $stmt = $PDO->prepare($sql);
 $stmt->bindParam(':name', $name);
 $stmt->bindParam(':email', $email);
@@ -47,10 +48,11 @@ $stmt->bindParam(':fone', $fone);
 $stmt->bindParam(':login', $login);
 $stmt->bindParam(':password', $password);
 $stmt->bindParam(':ddd', $ddd);
+$stmt->bindParam(':id', $id, PDO::PARAM_INT);
 
 if ($stmt->execute()) {
-    header('Location: index.php');
+    header('Location: ../index.php');
 } else {
-    echo "Erro ao cadastrar";
+    echo "Erro ao alterar";
     print_r($stmt->errorInfo());
 }

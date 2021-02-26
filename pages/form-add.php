@@ -1,6 +1,6 @@
 <?php
-require 'init.php';
-include 'auth-session.php';
+require '../config/init.php';
+include '../config/auth-session.php';
 ?>
 <!doctype html>
 <html>
@@ -9,12 +9,12 @@ include 'auth-session.php';
     <meta charset="utf-8">
 
     <title>Cadastro de Usuário</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style/style.css">
 </head>
 
 <body>
     <p>Online como: <b><?php echo $_SESSION['login']; ?></b></p>
-    <form action="add.php" method="post">
+    <form action="../config/add.php" method="post">
         <fieldset style="width:0px">
             <legend>Cadastro</legend>
             <label for="name">Nome: <span class=attention>*</span></label>
@@ -42,31 +42,31 @@ include 'auth-session.php';
 
             <br><br>
 
-            <label for="fone">Telefone:<span class=attention size=2 color="red">*only numbers</span></label>
+            <label for="fone">Telefone: <span class=attention size=2 color="red">*only numbers</span></label>
             <br>
             <input type="text" name="fone" id="fone" maxlength="9" size="11">
 
             <br><br>
 
-            <label for="login">Login:<span class=attention>*</span></label>
+            <label for="login">Login: <span class=attention>*</span></label>
             <br>
             <input type="text" name="login" id="login" maxlength="15">
 
             <br><br>
 
-            <label for="password">Senha:<span class=attention>*</span></label>
+            <label for="password">Senha: <span class=attention>*</span></label>
             <br>
             <input type="text" name="password" id="password" maxlength="30">
 
             <br><br>
 
-            <label for="email">Email:<span class=attention>*</span></label>
+            <label for="email">Email: <span class=attention>*</span></label>
             <br>
             <input type="text" name="email" id="email" maxlength="50">
 
             <br><br>
 
-            Gênero:<span class=attention>*</span>
+            Gênero: <span class=attention>*</span>
             <br>
             <input type="radio" name="gender" id="gener_m" value="m">
             <label for="gener_m">Masculino </label>

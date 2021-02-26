@@ -20,11 +20,11 @@ if (empty($login) || empty($password)) {
 } elseif (mysqli_num_rows($result) > 0) {
     $_SESSION['login'] = $login;
     $_SESSION['password'] = $password;
-    header('location:index.php');
+    header('location:../index.php');
 } else {
     unset($_SESSION['login']);
     unset($_SESSION['password']);
-    header('location:form-login.php');
+    header('location:../pages/form-login.php');
 }
 
 ?>

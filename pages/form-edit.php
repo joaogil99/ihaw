@@ -1,6 +1,6 @@
 <?php
-require 'init.php';
-include 'auth-session.php';
+require '../config/init.php';
+include '../config/auth-session.php';
 
 // pega o ID da URL
 $id = isset($_GET['id']) ? (int) $_GET['id'] : null;
@@ -35,15 +35,17 @@ if (!is_array($user)) {
     <meta charset="utf-8">
 
     <title>Edição de Usuário</title>
+    <link rel="stylesheet" href="../style/style.css">
 </head>
 
 <body>
 
     <p>Online como: <b><?php echo $_SESSION['login']; ?></b></p>
 
-    <form action="edit.php" method="post">
+    <form action="../config/edit.php" method="post">
         <fieldset style="width:0px">
-            <label for="name">Nome: </label>
+            <legend>Alteração</legend>
+            <label for="name">Nome: <span class=attention>*</span></label>
             <br>
             <input type="text" name="name" id="name" value="<?php echo $user[
                 'name'
@@ -51,7 +53,7 @@ if (!is_array($user)) {
 
             <br><br>
 
-            <label for="lastname">Sobrenome: </label>
+            <label for="lastname">Sobrenome: <span class=attention>*</span></label>
             <br>
             <input type="text" name="lastname" id="lastname" value="<?php echo $user[
                 'lastname'
@@ -59,14 +61,14 @@ if (!is_array($user)) {
 
             <br><br>
 
-            <label for="birthdate">Data de Nascimento: </label>
+            <label for="birthdate">Data de Nascimento: <span class=attention>*</span></label>
             <br>
             <input type="text" name="birthdate" id="birthdate" placeholder="dd/mm/YYYY"
                 value="<?php echo dateConvert($user['birthdate']); ?>">
 
             <br><br>
 
-            <label for="ddd">DDD: </label>
+            <label for="ddd">DDD: <span class=attention>*</span></label>
             <br>
             <input type="text" name="ddd" id="ddd" maxlength="2" size="1" value="<?php echo $user[
                 'ddd'
@@ -74,7 +76,7 @@ if (!is_array($user)) {
 
             <br><br>
 
-            <label for="fone">Telefone: </label>
+            <label for="fone">Telefone: <span class=attention size=2 color="red">*only numbers</span></label>
             <br>
             <input type="text" name="fone" id="fone" value="<?php echo $user[
                 'fone'
@@ -82,7 +84,7 @@ if (!is_array($user)) {
 
             <br><br>
 
-            <label for="login">Login: </label>
+            <label for="login">Login: <span class=attention>*</span></label>
             <br>
             <input type="text" name="login" id="login" value="<?php echo $user[
                 'login'
@@ -90,7 +92,7 @@ if (!is_array($user)) {
 
             <br><br>
 
-            <label for="password">Senha: </label>
+            <label for="password">Senha: <span class=attention>*</span></label>
             <br>
             <input type="text" name="password" id="password" value="<?php echo $user[
                 'password'
@@ -98,7 +100,7 @@ if (!is_array($user)) {
 
             <br><br>
 
-            <label for="email">Email: </label>
+            <label for="email">Email: <span class=attention>*</span></label>
             <br>
             <input type="text" name="email" id="email" value="<?php echo $user[
                 'email'
@@ -106,7 +108,7 @@ if (!is_array($user)) {
 
             <br><br>
 
-            Gênero:
+            Gênero: <span class=attention>*</span>
             <br>
             <input type="radio" name="gender" id="gener_m" value="m" <?php if (
                 $user['gender'] == 'm'
