@@ -9,12 +9,12 @@ include '../config/auth-session.php';
     <meta charset="utf-8">
 
     <title>Cadastro de Usuário</title>
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
     <p>Online como: <b><?php echo $_SESSION['login']; ?></b></p>
-    <form action="../config/add.php" method="post">
+    <form action="../config/register.php" method="post">
         <fieldset style="width:0px">
             <legend class="form-legend">Cadastro</legend>
             <label for="name">Nome: <span class=attention>*</span></label>

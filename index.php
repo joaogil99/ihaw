@@ -31,15 +31,13 @@ $stmt->execute();
 
     <title>Sistema de Cadastro</title>
 
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
     <p>Bem vindo: <b><?php echo $_SESSION['login']; ?></b></p>
-
-    <p><a href="pages/form-add.php">Adicionar Usuário</a></p>
-    
+  
     <p><a href="config/logout.php">Logout</a></p>
 
     <h2>Lista de Usuários</h2>

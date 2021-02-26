@@ -35,7 +35,7 @@ if (!is_array($user)) {
     <meta charset="utf-8">
 
     <title>Edição de Usuário</title>
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
