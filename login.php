@@ -2,15 +2,18 @@
 require_once 'init.php';
 session_start();
 
+// pega os valores de $login e $password
 $login = isset($_POST['login']) ? $_POST['login'] : null;
 $password = isset($_POST['password']) ? $_POST['password'] : null;
 
+// conecta com o banco e busca pelos valores
 $con = mysqli_connect("localhost", "root", "", "register");
 $result = mysqli_query(
     $con,
     "SELECT * FROM `users` WHERE `login` = '$login' AND `password`= '$password'"
 );
 
+// verificação dos campos
 if (empty($login) || empty($password)) {
     echo "Volte e preencha todos os campos";
     exit();
