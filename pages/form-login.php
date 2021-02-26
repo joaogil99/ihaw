@@ -20,11 +20,10 @@
 
 </head>
 
-<body class="login-dark">
-
+<body class="login">
     <form method="post" action="../config/login.php" id="formlogin" name="formlogin">
         <h2 class="sr-only">Login</h2>
-        <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
+        <div class="icon"><i class="icon ion-ios-locked-outline"></i></div>
         <div class="form-group"><input class="form-control" type="text" name="login" id="login" placeholder="Login">
         </div>
         <div class="form-group"><input class="form-control" type="password" name="password" id="password"
@@ -37,7 +36,6 @@
             <a href="form-register.php"> Create account</a>
         </div>
     </form>
-
 
     <!-- Local JS -->
     <script src="../js/script.js?1422981258"></script>

@@ -1,4 +1,4 @@
-.login-dark {
+.login {
   background-image: url(../src/star-sky.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -6,7 +6,7 @@
   text-align: center;
 }
 
-.login-dark form {
+.login form {
   max-width: 320px;
   width: 90%;
   background-color: #1e2833;
@@ -21,13 +21,13 @@
   text-align: center;
 }
 
-.login-dark .illustration {
+.login .icon {
   text-align: center;
   font-size: 75px;
   color: #2980ef;
 }
 
-.login-dark form .form-control {
+.login form .form-control {
   background: none;
   border: none;
   border-bottom: 1px solid #434a52;
@@ -38,7 +38,7 @@
   text-align: center;
 }
 
-.login-dark form .btn-primary {
+.login form .btn-primary {
   background: #2980ef;
   border: none;
   border-radius: 4px;
@@ -49,13 +49,13 @@
   outline: none;
 }
 
-.login-dark form .btn-primary:hover,
-.login-dark form .btn-primary:active {
+.login form .btn-primary:hover,
+.login form .btn-primary:active {
   background: #214a80;
   outline: none;
 }
 
-.login-dark form .register {
+.login form .register {
   display: block;
   text-align: center;
   font-size: 12px;
@@ -65,12 +65,12 @@
   margin-top: 20px;
 }
 
-.login-dark form .register:hover,
-.login-dark form .register:active {
+.login form .register:hover,
+.login form .register:active {
   opacity: 1;
   text-decoration: none;
 }
 
-.login-dark form .btn-primary:active {
+.login form .btn-primary:active {
   transform: translateY(1px);
 }
