@@ -13,31 +13,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 
     <!-- Local CSS -->
-    <link rel="stylesheet" href="../css/style.css?1422981258">
-    <link rel="stylesheet" href="../css/login.css?1422981258">
+    <link rel="stylesheet" href="../css/style.css?1422981258" type="text/css">
+    <link rel="stylesheet" href="../css/login.css?1422981258" type="text/css">
 
     <title>Login</title>
 
 </head>
 
-<body>
-    <div class="login-dark">
-        <form method="post" action="../config/login.php" id="formlogin" name="formlogin">
-            <h2 class="sr-only">Login</h2>
-            <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
-            <div class="form-group"><input class="form-control" type="text" name="login" id="login" placeholder="Login">
-            </div>
-            <div class="form-group"><input class="form-control" type="password" name="password" id="password"
-                    placeholder="Password">
-            </div>
-            <div class="form-group">
-                <button class="btn btn-primary btn-block" type="submit">Log In</button>
-            </div>
-            <div class="register">Not registered? 
-                <a href="form-register.php"> Create account</a>
-            </div>
-        </form>
-    </div>
+<body class="login-dark">
+
+    <form method="post" action="../config/login.php" id="formlogin" name="formlogin">
+        <h2 class="sr-only">Login</h2>
+        <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
+        <div class="form-group"><input class="form-control" type="text" name="login" id="login" placeholder="Login">
+        </div>
+        <div class="form-group"><input class="form-control" type="password" name="password" id="password"
+                placeholder="Password">
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary btn-block" type="submit">Login</button>
+        </div>
+        <div class="register">Not registered?
+            <a href="form-register.php"> Create account</a>
+        </div>
+    </form>
+
 
     <!-- Local JS -->
     <script src="../js/script.js?1422981258"></script>
