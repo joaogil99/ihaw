@@ -8,7 +8,7 @@ require '../config/init.php';
     <meta charset="utf-8">
 
     <title>Cadastro de Usuário</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css?1422981258">
 </head>
 
 <body>
@@ -24,6 +24,21 @@ require '../config/init.php';
             <label for="lastname">Sobrenome:<span class=attention>*</span></label>
             <br>
             <input type="text" name="lastname" id="lastname" maxlength="60">
+    
+            <br><br>
+
+            <label for="email">Email: <span class=attention>*</span></label>
+            <br>
+            <input type="text" name="email" id="email" maxlength="50">
+
+            <br><br>
+
+            Gênero: <span class=attention>*</span>
+            <br>
+            <input type="radio" name="gender" id="gener_m" value="m">
+            <label for="gener_m">Masculino </label>
+            <input type="radio" name="gender" id="gener_f" value="f">
+            <label for="gener_f">Feminino </label>
 
             <br><br>
 
@@ -55,21 +70,6 @@ require '../config/init.php';
             <label for="password">Senha: <span class=attention>*</span></label>
             <br>
             <input type="text" name="password" id="password" maxlength="30">
-
-            <br><br>
-
-            <label for="email">Email: <span class=attention>*</span></label>
-            <br>
-            <input type="text" name="email" id="email" maxlength="50">
-
-            <br><br>
-
-            Gênero: <span class=attention>*</span>
-            <br>
-            <input type="radio" name="gender" id="gener_m" value="m">
-            <label for="gener_m">Masculino </label>
-            <input type="radio" name="gender" id="gener_f" value="f">
-            <label for="gener_f">Feminino </label>
 
             <br><br>
 

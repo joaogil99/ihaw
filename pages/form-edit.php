@@ -14,7 +14,7 @@ if (empty($id)) {
 // busca os dados du usuário a ser editado
 $PDO = db_connect();
 $sql =
-    "SELECT name, email, gender, birthdate, lastname, fone, login, password, ddd  FROM users WHERE id = :id";
+    "SELECT name, lastname, email, gender, birthdate, ddd, fone, login, password FROM users WHERE id = :id";
 $stmt = $PDO->prepare($sql);
 $stmt->bindParam(':id', $id, PDO::PARAM_INT);
 
@@ -35,7 +35,7 @@ if (!is_array($user)) {
     <meta charset="utf-8">
 
     <title>Edição de Usuário</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css?1422981258">
 </head>
 
 <body>
@@ -58,6 +58,29 @@ if (!is_array($user)) {
             <input type="text" name="lastname" id="lastname" value="<?php echo $user[
                 'lastname'
             ]; ?>">
+
+            <br><br>
+
+            <label for="email">Email: <span class=attention>*</span></label>
+            <br>
+            <input type="text" name="email" id="email" value="<?php echo $user[
+                'email'
+            ]; ?>">
+
+            <br><br>
+
+            Gênero: <span class=attention>*</span>
+            <br>
+            <input type="radio" name="gender" id="gener_m" value="m" <?php if (
+                $user['gender'] == 'm'
+            ): ?>
+                checked="checked" <?php endif; ?>>
+            <label for="gener_m">Masculino </label>
+            <input type="radio" name="gender" id="gener_f" value="f" <?php if (
+                $user['gender'] == 'f'
+            ): ?>
+                checked="checked" <?php endif; ?>>
+            <label for="gener_f">Feminino </label>
 
             <br><br>
 
@@ -99,30 +122,6 @@ if (!is_array($user)) {
             ]; ?>">
 
             <br><br>
-
-            <label for="email">Email: <span class=attention>*</span></label>
-            <br>
-            <input type="text" name="email" id="email" value="<?php echo $user[
-                'email'
-            ]; ?>">
-
-            <br><br>
-
-            Gênero: <span class=attention>*</span>
-            <br>
-            <input type="radio" name="gender" id="gener_m" value="m" <?php if (
-                $user['gender'] == 'm'
-            ): ?>
-                checked="checked" <?php endif; ?>>
-            <label for="gener_m">Masculino </label>
-            <input type="radio" name="gender" id="gener_f" value="f" <?php if (
-                $user['gender'] == 'f'
-            ): ?>
-                checked="checked" <?php endif; ?>>
-            <label for="gener_f">Feminino </label>
-
-            <br><br>
-
 
             <input type="hidden" name="id" value="<?php echo $id; ?>">
 

@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `register`
+-- Database: `ihaw`
 --
 
 -- --------------------------------------------------------
@@ -31,22 +31,22 @@ SET time_zone = "+00:00";
 CREATE TABLE `users` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(60) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
+  `lastname` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(80) COLLATE utf8_unicode_ci NOT NULL,
   `gender` enum('m','f') COLLATE utf8_unicode_ci NOT NULL,
   `birthdate` date NOT NULL,
-  `lastname` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
+  `ddd` int(2) NOT NULL,
   `fone` char(14) COLLATE utf8_unicode_ci NOT NULL,
   `login` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
-  `password` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
-  `ddd` int(2) NOT NULL
+  `password` varchar(30) COLLATE utf8_unicode_ci NOT NULL  
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `gender`, `birthdate`, `lastname`, `fone`, `login`, `password`, `ddd`) VALUES
-(1, 'João Gabriel', 'joaogil99@gmail.com', 'm', '1999-12-14', 'Gil de Paula', '998149964', 'joaogil99', '123', 44);
+INSERT INTO `users` (`id`, `name`, `lastname`, `email`, `gender`, `birthdate`, `ddd`, `fone`, `login`, `password`) VALUES
+(1, 'João', 'Gil', 'joaogil99@gmail.com', 'm', '1999-12-14', '44', '998149964', 'joaogil', '99');
 
 --
 -- Indexes for dumped tables

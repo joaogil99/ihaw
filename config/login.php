@@ -7,7 +7,7 @@ $login = isset($_POST['login']) ? $_POST['login'] : null;
 $password = isset($_POST['password']) ? $_POST['password'] : null;
 
 // conecta com o banco e busca pelos valores
-$con = mysqli_connect("localhost", "root", "", "register");
+$con = mysqli_connect("localhost", "root", "", "ihaw");
 $result = mysqli_query(
     $con,
     "SELECT * FROM `users` WHERE `login` = '$login' AND `password`= '$password'"
