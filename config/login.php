@@ -13,14 +13,12 @@ $result = mysqli_query(
     "SELECT * FROM `users` WHERE `login` = '$login' AND `password`= '$password'"
 );
 
+
 // verificação dos campos
-if (empty($login) || empty($password)) {
-    echo "Volte e preencha todos os campos";
-    exit();
-} elseif (mysqli_num_rows($result) > 0) {
+if (mysqli_num_rows($result) > 0) {
     $_SESSION['login'] = $login;
     $_SESSION['password'] = $password;
-    header('location:../index.php');
+    header('location:../pages/home.php');
 } else {
     unset($_SESSION['login']);
     unset($_SESSION['password']);

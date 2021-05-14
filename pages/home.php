@@ -1,4 +1,11 @@
-<!doctype html>
+<?php
+require_once '../config/init.php';
+include '../config/auth-session.php';
+
+// abre a conexão
+$PDO = db_connect();
+?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,29 +21,48 @@
 
     <!-- Local CSS -->
     <link rel="stylesheet" href="../css/style.css?1422981258" type="text/css">
-    <link rel="stylesheet" href="../css/login.css?1422981258" type="text/css">
+    <link rel="stylesheet" href="../css/home.css?1422981258" type="text/css">
 
-    <title>Login</title>
-
+    <title>Home</title>
 </head>
 
-<body class="login">
-    <form method="post" action="../config/login.php" id="formlogin" name="formlogin">
-        <h2 class="sr-only">Login</h2>
-        <div class="icon"><i class="icon ion-ios-locked-outline"></i></div>
-        <div class="form-group"><input class="form-control" type="text" name="login" id="login" placeholder="Login" required/>
-        </div>
-        <div class="form-group"><input class="form-control" type="password" name="password" id="password"
-                placeholder="Password" required/>
-        </div>
-        <div class="form-group">
-            <button class="btn btn-primary btn-block" type="submit">Login</button>
-        </div>
-        <div class="register">Not registered?
-            <a href="form-register.php"> Create account</a>
-        </div>
-    </form>
-
+<body class="home">
+    <header>
+        <p class="username">Welcome: <b><?php echo $_SESSION['login']; ?></b></p>
+    </header>
+    <div class="container">
+        CONTAINER
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <!-- Local JS -->
     <script src="../js/script.js?1422981258"></script>
 
@@ -50,8 +76,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
     -->
-
-
 </body>
 
 </html>
