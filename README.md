@@ -1,4 +1,4 @@
-# ihaw
+# IHAW
 
 ### João Gabriel Gil de Paula
 
