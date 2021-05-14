@@ -1,5 +1,5 @@
 # IHAW
 
-### João Gabriel Gil de Paula
+## João Gabriel Gil de Paula
 
-Projeto em desenvolvimento
+### Projeto em desenvolvimento
