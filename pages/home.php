@@ -20,19 +20,17 @@ $PDO = db_connect();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 
     <!-- Local CSS -->
-    <link rel="stylesheet" href="../css/style.css?1422981258" type="text/css">
     <link rel="stylesheet" href="../css/home.css?1422981258" type="text/css">
-
     <title>Home</title>
 </head>
 
 <body class="home">
     <header>
         <p class="username">Welcome: <b><?php echo $_SESSION['login']; ?></b></p>
+        <a class="logout" href="../config/logout.php">Logout</a>
     </header>
     <div class="container">
-        CONTAINER
-        <table class="table">
+        <table class="table table-dark table-hover">
             <thead>
                 <tr>
                     <th>ID</th>
